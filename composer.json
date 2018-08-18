@@ -1,0 +1,43 @@
+{
+    "name": "billythekid/ezmap",
+    "description": "EZMap integration for Craft CMS",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "ezmap"
+    ],
+    "support": {
+        "docs": "https://github.com/billythekid/ezmap/blob/master/README.md",
+        "issues": "https://github.com/billythekid/ezmap/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Billy Fagan",
+            "homepage": "https://billyfagan.co.uk"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "billythekid\\ezmap\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "EZMap",
+        "handle": "ezmap",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/billythekid/ezmap/master/CHANGELOG.md",
+        "components": {
+            "eZMapService": "billythekid\\ezmap\\services\\EZMapService"
+        },
+        "class": "billythekid\\ezmap\\EZMap"
+    }
+}

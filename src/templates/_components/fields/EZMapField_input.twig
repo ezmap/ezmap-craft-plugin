@@ -1,0 +1,38 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * EZMap plugin for Craft CMS 3.x
+ *
+ * EZMapField Field Input
+ *
+ * @author    Billy Fagan
+ * @copyright Copyright (c) 2018 Billy Fagan
+ * @link      https://billyfagan.co.uk
+ * @package   EZMap
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% set maps = craft.eZMap.getMaps %}
+
+{% if not maps %}
+
+  <div class="error">
+  There appears to be some issue connecting to your EZ Map account. Please <a href="/admin/settings/plugins/ezmap">check your settings</a>.
+</div>
+
+{% else %}
+
+  {{ forms.selectField({
+    label: 'Choose map',
+    instructions: '',
+    id: name,
+    name: name,
+    options: maps,
+    value: value}) }}
+
+{% endif %}
+
+

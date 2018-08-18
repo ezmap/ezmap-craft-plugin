@@ -1,0 +1,34 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * EZMap plugin for Craft CMS 3.x
+ *
+ * EZMap Settings.twig
+ *
+ * @author    Billy Fagan
+ * @copyright Copyright (c) 2018 Billy Fagan
+ * @link      https://billyfagan.co.uk
+ * @package   EZMap
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("billythekid\\ezmap\\assetbundles\\ezmap\\EZMapAsset") %}
+
+{{ forms.textField({
+  label: 'EZMap Email Address',
+  instructions: 'Enter the email address used for your ezmap.co account here.',
+  id: 'ezmapEmail',
+  name: 'ezmapEmail',
+  value: settings['ezmapEmail']})
+}}
+
+{{ forms.textField({
+  label: 'EZMap API Key',
+  instructions: 'Enter the API key for your ezmap.co account here.',
+  id: 'ezmapApiKey',
+  name: 'ezmapApiKey',
+  value: settings['ezmapApiKey']})
+}}
