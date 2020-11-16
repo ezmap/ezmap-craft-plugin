@@ -2,7 +2,6 @@
     "name": "billythekid/ezmap",
     "description": "EZMap integration for Craft CMS",
     "type": "craft-plugin",
-    "version": "1.0.1",
     "keywords": [
         "craft",
         "cms",
