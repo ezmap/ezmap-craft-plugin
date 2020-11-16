@@ -11,7 +11,6 @@
 namespace billythekid\ezmap\fields;
 
 use billythekid\ezmap\EZMap;
-use billythekid\ezmap\assetbundles\ezmapfieldfield\EZMapFieldFieldAsset;
 
 use Craft;
 use craft\base\ElementInterface;
@@ -335,8 +334,6 @@ class EZMapField extends Field
      */
     public function getInputHtml($value, ElementInterface $element = null): string
     {
-        // Register our asset bundle
-        Craft::$app->getView()->registerAssetBundle(EZMapFieldFieldAsset::class);
 
         // Get our id and namespace
         $id = Craft::$app->getView()->formatInputId($this->handle);
